@@ -1,0 +1,56 @@
+.bloc_mention_to_add {
+
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+    background-color: rgb(200, 200, 200);
+    border-radius: 10px;
+    right: 40vw;
+    top: 40vh;
+    z-index: 5;
+}
+
+.bloc_mention_to_add input {
+    margin: 1vh;
+}
+
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.checkbox_mention {
+    width: 6vw;
+}
+
+.list_eleves {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    height: 15vh;
+    overflow: scroll;
+    margin-right: 4vw;
+    -ms-overlow-style: none;
+    scrollbar-width: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.checkbox_mention button{
+    margin: 1vh;
+}
+
+.bg{
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: rgba(0,0, 0, 0.5);
+    z-index: 4;
+}

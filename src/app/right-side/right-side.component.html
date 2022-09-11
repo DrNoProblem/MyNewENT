@@ -1,0 +1,73 @@
+<div class="block_eleve_mention">
+    <h3 class="nom_eleve">Marie 3B</h3>
+    <div class="bloc_mention retard" (click)="excuse = 'retard'">
+        <div class="icon_arrow">></div>
+        <div class="type_mention">RETARD</div>
+        <div class="matiere_mention">Histoire</div>
+    </div>
+
+    <div class="bloc_mention absence" (click)="excuse = 'absence'">
+        <div class="type_mention">ABSENCE</div>
+        <div class="matiere_mention">Maths</div>
+        <div class="icon_arrow">></div>
+    </div>
+
+    <div class="bloc_mention exclusion" (click)="excuse = 'exclusion'">
+        <div class="type_mention">EXCLUSION</div>
+        <div class="matiere_mention">Francais</div>
+        <div class="icon_arrow">></div>
+    </div>
+
+</div>
+
+<div class="block_eleve_mention">
+    <h3 class="nom_eleve">Lea 6C</h3>
+    <div class="bloc_mention retard" (click)="excuse = 'retard'">
+        <div class="icon_arrow">></div>
+        <div class="type_mention">RETARD</div>
+        <div class="matiere_mention">Histoire</div>
+    </div>
+
+    <div class="bloc_mention absence" (click)="excuse = 'absence'">
+        <div class="type_mention">ABSENCE</div>
+        <div class="matiere_mention">Maths</div>
+        <div class="icon_arrow">></div>
+    </div>
+
+    <div class="bloc_mention exclusion" (click)="excuse = 'exclusion'">
+        <div class="type_mention">EXCLUSION</div>
+        <div class="matiere_mention">Francais</div>
+        <div class="icon_arrow">></div>
+    </div>
+
+</div>
+
+<div class="bg" *ngIf="excuse != ''" (click)="excuse = ''"></div>
+<div class="bloc_reponse" *ngIf="excuse != ''">
+
+    
+    <div class="bloc_mention retard" *ngIf="excuse == 'retard'">
+        <div class="icon_arrow">></div>
+        <div class="type_mention">RETARD</div>
+        <div class="matiere_mention">Histoire</div>
+    </div>
+
+    <div class="bloc_mention absence" *ngIf="excuse == 'absence'">
+        <div class="type_mention">ABSENCE</div>
+        <div class="matiere_mention">Maths</div>
+        <div class="icon_arrow">></div>
+    </div>
+
+    <div class="bloc_mention exclusion" *ngIf="excuse == 'exclusion'">
+        <div class="type_mention">EXCLUSION</div>
+        <div class="matiere_mention">Francais</div>
+        <div class="icon_arrow">></div>
+    </div>
+
+    <p>le 20 octobre de 10h a 12h</p>
+
+    <p>Votre message</p>
+    <textarea></textarea>
+    <button class="btn btn-primary"  (click)="excuse = ''">Envoyer</button>
+
+</div>

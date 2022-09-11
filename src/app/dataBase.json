@@ -1,0 +1,853 @@
+{
+    "users": [
+        {
+            "id_user": "0000",
+            "email": "jhon.doe@test.com",
+            "mot_de_passe": "admin",
+            "prenom": "jhon",
+            "nom": "doe",
+            "role": "admin",
+            "matiere": [],
+            "classe": "",
+            "id_enfants": [],
+            "message_mention": []
+        },
+        {
+            "id_user": "0001",
+            "email": "martin.dupont@test.com",
+            "mot_de_passe": "martin",
+            "prenom": "martin",
+            "nom": "dupont",
+            "role": "eleve",
+            "matiere": [],
+            "classe": "3A",
+            "id_enfants": [],
+            "message_mention": []
+        },
+        {
+            "id_user": "0002",
+            "email": "antoine.dupont@test.com",
+            "mot_de_passe": "antoine",
+            "prenom": "antoine",
+            "nom": "dupont",
+            "role": "eleve",
+            "matiere": [],
+            "classe": "6C",
+            "id_enfants": [],
+            "message_mention": [
+                {
+                    "matiere": "maths",
+                    "id_prof": "0100",
+                    "date": [{
+                        "debut": "2022-10-03T8:00",
+                        "fin": "2022-10-03T10:00"
+                    }],
+                    "mention": "absence",
+                    "reponse": ""
+                },
+                {
+                    "matiere": "maths",
+                    "id_prof": "0100",
+                    "date": [{
+                        "debut": "2022-07-05T8:00",
+                        "fin": "2022-07-05T12:00"
+                    }],
+                    "mention": "exclusion",
+                    "reponse": ""
+                }
+            ]
+        },
+        {
+            "id_user": "0003",
+            "email": "alex.jones@test.com",
+            "mot_de_passe": "alex",
+            "prenom": "alex",
+            "nom": "jones",
+            "role": "eleve",
+            "matiere": [],
+            "classe": "4B",
+            "id_enfants": [],
+            "message_mention": [
+                {
+                    "matiere": "physique",
+                    "id_prof": "0200",
+                    "date": [
+                        {
+                            "debut": "2022-04-15T8:00",
+                            "fin": "2022-04-15T10:00"
+                        }
+                    ],
+                    "mention": "retard",
+                    "reponse": "probleme de bus"
+                }
+            ]
+        },
+        {
+            "id_user": "0010",
+            "email": "daniel.dupont@test.com",
+            "mot_de_passe": "daniel",
+            "prenom": "daniel",
+            "nom": "dupont",
+            "role": "parent",
+            "matiere": [],
+            "classe": "",
+            "id_enfants": [
+                "0001",
+                "0002"
+            ],
+            "message_mention": []
+        },
+        {
+            "id_user": "0020",
+            "email": "gerard.jones@test.com",
+            "mot_de_passe": "gerard",
+            "prenom": "gerard",
+            "nom": "jones",
+            "role": "parent",
+            "matiere": [],
+            "classe": "",
+            "id_enfants": [
+                "0003"
+            ],
+            "message_mention": []
+        },
+        {
+            "id_user": "0100",
+            "email": "alain.nortes@test.com",
+            "mot_de_passe": "alain",
+            "prenom": "alain",
+            "nom": "nortes",
+            "role": "prof",
+            "matiere": [
+                {
+                    "nom": "maths",
+                    "class": [
+                        "3A",
+                        "6C"
+                    ]
+                }
+            ],
+            "classe": "",
+            "id_enfants": [],
+            "message_mention": []
+        },
+        {
+            "id_user": "0200",
+            "email": "jean.mortier@test.com",
+            "mot_de_passe": "jean",
+            "prenom": "jean",
+            "nom": "mortier",
+            "role": "prof",
+            "matiere": [
+                {
+                    "nom": "svt",
+                    "class": [
+                        "4B",
+                        "6C",
+                        "3A"
+                    ]
+                },
+                {
+                    "nom": "physique",
+                    "class": [
+                        "3A",
+                        "4B"
+                    ]
+                }
+            ],
+            "classe": "",
+            "id_enfants": [],
+            "message_mention": []
+        }
+    ],
+    "classe": [
+        {
+            "nom_classe": "3A",
+            "id_eleve": [
+                "0001"
+            ],
+            "matiere": [
+                {
+                    "nom": "maths",
+                    "id_prof": "0100",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=MO",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T8:00",
+                                    "fin": "2020-01-01T10:00"
+                                },
+                                {
+                                    "debut": "2020-01-01T13:00",
+                                    "fin": "2020-01-01T14:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TU",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T10:00",
+                                    "fin": "2020-01-01T12:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=WE",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T15:00",
+                                    "fin": "2020-01-01T16:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "francais",
+                    "id_prof": "",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=WE",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T8:00",
+                                    "fin": "2020-01-01T10:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TH",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T11:00",
+                                    "fin": "2020-01-01T12:00"
+                                },
+                                {
+                                    "debut": "2020-01-01T16:00",
+                                    "fin": "2020-01-01T17:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=FR",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T10:00",
+                                    "fin": "2020-01-01T12:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "physique",
+                    "id_prof": "0200",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=MO",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T15:00",
+                                    "fin": "2020-01-01T16:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TU",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T9:00",
+                                    "fin": "2020-01-01T10:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TH",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T13:00",
+                                    "fin": "2020-01-01T15:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "svt",
+                    "id_prof": "0200",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=MO",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T11:00",
+                                    "fin": "2020-01-01T12:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TU",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T13:00",
+                                    "fin": "2020-01-01T15:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TH",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T8:00",
+                                    "fin": "2020-01-01T9:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "histoire",
+                    "id_prof": "",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=MO",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T10:00",
+                                    "fin": "2020-01-01T11:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TH",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T15:00",
+                                    "fin": "2020-01-01T17:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=FR",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T8:00",
+                                    "fin": "2020-01-01T10:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "anglais",
+                    "id_prof": "",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=WE",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T10:00",
+                                    "fin": "2020-01-01T12:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TH",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T9:00",
+                                    "fin": "2020-01-01T10:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=FR",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T14:00",
+                                    "fin": "2020-01-01T15:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "Sport",
+                    "id_prof": "",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=WE",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T13:00",
+                                    "fin": "2020-01-01T15:00"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nom_classe": "6C",
+            "id_eleve": [
+                "0002"
+            ],
+            "matiere": [
+                {
+                    "nom": "maths",
+                    "id_prof": "0100",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=MO",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T14:00",
+                                    "fin": "2020-01-01T15:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TH",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T8:00",
+                                    "fin": "2020-01-01T10:00"
+                                },
+                                {
+                                    "debut": "2020-01-01T13:00",
+                                    "fin": "2020-01-01T14:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=FR",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T8:00",
+                                    "fin": "2020-01-01T10:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "francais",
+                    "id_prof": "",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=MO",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T8:00",
+                                    "fin": "2020-01-01T10:00"
+                                },
+                                {
+                                    "debut": "2020-01-01T15:00",
+                                    "fin": "2020-01-01T16:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TU",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T11:00",
+                                    "fin": "2020-01-01T12:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=WE",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T10:00",
+                                    "fin": "2020-01-01T12:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "physique",
+                    "id_prof": "0200",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TU",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T13:00",
+                                    "fin": "2020-01-01T14:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TH",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T10:00",
+                                    "fin": "2020-01-01T11:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=FR",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T11:00",
+                                    "fin": "2020-01-01T12:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "svt",
+                    "id_prof": "0200",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=WE",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T12:00",
+                                    "fin": "2020-01-01T13:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TH",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T13:00",
+                                    "fin": "2020-01-01T14:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=FR",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T13:00",
+                                    "fin": "2020-01-01T15:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "histoire",
+                    "id_prof": "",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=MO",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T13:00",
+                                    "fin": "2020-01-01T14:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=WE",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T8:00",
+                                    "fin": "2020-01-01T10:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=FR",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T15:00",
+                                    "fin": "2020-01-01T17:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "anglais",
+                    "id_prof": "",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=MO",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T10:00",
+                                    "fin": "2020-01-01T12:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TU",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T10:00",
+                                    "fin": "2020-01-01T11:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=WE",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T14:00",
+                                    "fin": "2020-01-01T15:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "Sport",
+                    "id_prof": "",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TU",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T8:00",
+                                    "fin": "2020-01-01T10:00"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nom_classe": "4B",
+            "id_eleve": [
+                "0003"
+            ],
+            "matiere": [
+                {
+                    "nom": "maths",
+                    "id_prof": "0100",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=MO",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T15:00",
+                                    "fin": "2020-01-01T17:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TU",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T8:00",
+                                    "fin": "2020-01-01T9:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=WE",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T8:00",
+                                    "fin": "2020-01-01T10:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TH",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T10:00",
+                                    "fin": "2020-01-01T11:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "francais",
+                    "id_prof": "",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=WE",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T14:00",
+                                    "fin": "2020-01-01T16:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TH",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T13:00",
+                                    "fin": "2020-01-01T15:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=FR",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T15:00",
+                                    "fin": "2020-01-01T17:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "physique",
+                    "id_prof": "0200",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=MO",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T10:00",
+                                    "fin": "2020-01-01T11:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TU",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T11:00",
+                                    "fin": "2020-01-01T12:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=FR",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T8:00",
+                                    "fin": "2020-01-01T10:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "svt",
+                    "id_prof": "0200",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=MO",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T13:00",
+                                    "fin": "2020-01-01T14:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TH",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T11:00",
+                                    "fin": "2020-01-01T12:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=FR",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T9:00",
+                                    "fin": "2020-01-01T11:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "histoire",
+                    "id_prof": "",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=MO",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T11:00",
+                                    "fin": "2020-01-01T12:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TU",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T13:00",
+                                    "fin": "2020-01-01T15:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=FR",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T13:00",
+                                    "fin": "2020-01-01T15:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "anglais",
+                    "id_prof": "",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TU",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T9:00",
+                                    "fin": "2020-01-01T10:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=WE",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T13:00",
+                                    "fin": "2020-01-01T14:00"
+                                }
+                            ]
+                        },
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=TH",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T15:00",
+                                    "fin": "2020-01-01T17:00"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nom": "Sport",
+                    "id_prof": "",
+                    "horraires": [
+                        {
+                            "jour": "FREQ=WEEKLY;BYDAY=MO",
+                            "heure": [
+                                {
+                                    "debut": "2020-01-01T8:00",
+                                    "fin": "2020-01-01T10:00"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

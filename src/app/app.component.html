@@ -1,0 +1,21 @@
+<div>
+    <app-header></app-header>
+</div>
+<button class="btn btn-primary" (click)="admin = true">admin</button>
+<button class="btn btn-primary" (click)="admin = false">other</button>
+<div class="contentpage" *ngIf="!admin">
+
+    <div class="calendar">
+        <app-calendar></app-calendar>
+    </div>
+
+    <div class="mention">
+        <app-right-side></app-right-side>
+    </div>
+
+</div>
+
+<div class="contentadmin" *ngIf="admin">
+    <app-admin-part></app-admin-part>
+
+</div>

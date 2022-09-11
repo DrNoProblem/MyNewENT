@@ -1,0 +1,109 @@
+<body>
+    <button class="btn btn-primary" (click)="addmention = true">add mention</button>
+    <br>
+    <div class="row text-center">
+
+        <div class="col-md-4">
+            <div class="btn-group">
+                <div class="btn btn-primary" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate">
+                    Previous
+                </div>
+                <div class="btn btn-outline-secondary" mwlCalendarToday [(viewDate)]="viewDate">
+                    Today
+                </div>
+                <div class="btn btn-primary" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate">
+                    Next
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
+        </div>
+
+        <div class="col-md-4">
+            <div class="btn-group">
+                <div class="btn btn-primary" (click)="setView(CalendarView.Month)"
+                    [class.active]="view === CalendarView.Month">
+                    Month
+                </div>
+                <div class="btn btn-primary" (click)="setView(CalendarView.Week)"
+                    [class.active]="view === CalendarView.Week">
+                    Week
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <br>
+    <div [ngSwitch]="view">
+
+        <mwl-calendar-month-view (dayClicked)="dayClicked($event.day)" *ngSwitchCase="CalendarView.Month"
+            [viewDate]="viewDate" [events]="events">
+        </mwl-calendar-month-view>
+
+        <mwl-calendar-week-view *ngSwitchCase="CalendarView.Week" [viewDate]="viewDate" [events]="events">
+        </mwl-calendar-week-view>
+
+    </div>
+
+    <div class="bg" *ngIf="addmention" (click)="addmention = false"></div>
+    <div class="bloc_mention_to_add" *ngIf="addmention">
+        <h3>Ajouter une mention</h3>
+        <div class="flex-row">
+            <div class="list_eleves">
+                <div>
+                    <input type="checkbox" id="scales1" name="scales">
+                    <label for="scales1">eleve 1</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="scales2" name="scales">
+                    <label for="scales2">eleve 2</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="scales1" name="scales">
+                    <label for="scales1">eleve 3</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="scales2" name="scales">
+                    <label for="scales2">eleve 4</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="scales1" name="scales">
+                    <label for="scales1">eleve 5</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="scales2" name="scales">
+                    <label for="scales2">eleve 6</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="scales1" name="scales">
+                    <label for="scales1">eleve 7</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="scales2" name="scales">
+                    <label for="scales2">eleve 8</label>
+                </div>
+
+            </div>
+            <div class="checkbox_mention">
+                <div>
+                    <input type="checkbox" id="retard" name="retard">
+                    <label for="retard">retard</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="absence" name="absence">
+                    <label for="absence">absence</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="exclusion" name="exclusion">
+                    <label for="exclusion">exclusion</label>
+                </div>
+
+                <button class="btn btn-primary" (click)="addmention = false">Envoyer</button>
+            </div>
+
+        </div>
+    </div>
+</body>

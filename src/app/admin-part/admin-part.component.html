@@ -1,0 +1,42 @@
+<div class="content_admin">
+    <ul class="list_classe">
+        <p>liste des classe</p>
+        <li class="classe" (click)="classe = '3B';classeask = false">3B</li>
+        <li class="classe" (click)="classe = '4B';classeask = false">4B</li>
+        <li class="classe" (click)="classe = '2B';classeask = false">2B</li>
+    </ul>
+
+    <ul class="3B" *ngIf="classe == '3B'">
+        <p>liste des eleve de 3B</p>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 1</li>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 2</li>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 3</li>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 4</li>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 5</li>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 6</li>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 7</li>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 8</li>
+    </ul>
+
+    <ul class="4B" *ngIf="classe == '4B'">
+        <p>liste des eleve de 4B</p>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 1</li>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 2</li>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 3</li>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 4</li>
+    </ul>
+
+    <ul class="2B" *ngIf="classe == '2B'">
+        <p>liste des eleve de 2B</p>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 1</li>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 2</li>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 3</li>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 4</li>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 5</li>
+        <li class="eleve" (click)="classeask = !classeask; classe =''">eleve 6</li>
+    </ul>
+    <div *ngIf="classeask" style="width: 100%;margin:1vw">
+        <app-calendar></app-calendar>
+    </div>
+
+</div>

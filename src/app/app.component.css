@@ -1,0 +1,26 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.contentpage{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 100vw;
+}
+
+.mention {
+    width: 20vw;
+    margin: 2vW 2vw 2vw 0;
+}
+
+.calendar {
+    width: 100%;
+    margin: 0 2vW;
+}
+
+button {
+    margin:1vh
+}

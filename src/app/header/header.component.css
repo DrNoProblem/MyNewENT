@@ -1,0 +1,62 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    background-color: rgb(200, 200, 200);
+
+}
+
+.title {
+    left: 0;
+    position: absolute;
+    margin: 50px;
+    color: #0d6efd;
+    font-size: 35px;
+}
+
+button.btn.btn-primary {
+    margin: 0 40px;
+}
+
+.user_info,
+.user_role {
+    font-size: 20px;
+    margin: 0 2vw;
+}
+
+.bloc_login {
+    z-index: 5;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    padding: 1vw;
+    background-color: rgb(200, 200, 200);
+    border-radius: 5%;
+    right: 1vw;
+    top: 1vw;
+    box-shadow: 0px 1px 10px grey, 1px 0px 10px grey, 0px -1px 10px grey, -1px 0px 10px grey;
+}
+
+.bloc_login input {
+    margin-bottom: 2vh;
+}
+
+.bloc_login button {
+    margin-left: 0;
+}
+
+
+.bg{
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: rgba(0,0, 0, 0);
+    z-index: 4;
+}

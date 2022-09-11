@@ -1,0 +1,19 @@
+<div class="header">
+    <p class="title"><strong>My New ENT</strong></p>
+    <div class="user_info">max le roux</div>
+    <div class="user_role">admin</div>
+    <div class="button_log">
+        <button class="btn btn-primary" (click)="log_in = true" *ngIf="btnlog_in">LOG IN</button>
+        <button class="btn btn-primary" (click)="btnlog_in = true" *ngIf="!btnlog_in">LOG OUT</button>
+    </div>
+</div>
+
+<div class="bg" *ngIf="log_in" (click)="log_in = false"></div>
+
+<div class="bloc_login" *ngIf="log_in">
+    <p>Email</p>
+    <input type="mail">
+    <p>Mot de passe</p>
+    <input type="password">
+    <button class="btn btn-primary" (click)="log_in = false; btnlog_in = false">Log In</button>
+</div>
